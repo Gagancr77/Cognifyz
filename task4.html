@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+</head>
+<body>
+    <button id="changeColorBtn">Change Background Color</button>
+
+
+    <script>
+
+        const button = document.getElementById('changeColorBtn');
+
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+       
+        button.addEventListener('click', function() {
+            
+            document.body.style.backgroundColor = getRandomColor();
+        });
+    </script>
+</body>
+</html>
